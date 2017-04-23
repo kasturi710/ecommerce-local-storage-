@@ -22,23 +22,23 @@
             book.push(itemlist[0].a);
             quantity.push(1);
             price.push(parseInt(itemlist[0].c.split('₹')[1]));
-//            for(i=1;i<itemlist.length;i++)
-//            {
-//                flag=0;
-//                for(j=0;j<book.length;j++)
-//                {
-//                    if(book[j]==itemlist[i].a)
-//                    {quantity[j]++;
-//                    price[j]+=price[j];
-//                    flag=1;}
-//                }
-//                if(flag==0)
-//                {
-//                    book.push(itemlist[i].a);
-//                    quantity.push(1);
-//                    price.push(parseInt(itemlist[i].c.split('₹')[1]));
-//                }
-//            }
+            for(i=1;i<itemlist.length;i++)
+            {
+                flag=0;
+                for(j=0;j<book.length;j++)
+                {
+                    if(book[j]==itemlist[i].a)
+                    {quantity[j]++;
+                    price[j]+=price[j];
+                    flag=1;}
+                }
+                if(flag==0)
+                {
+                    book.push(itemlist[i].a);
+                    quantity.push(1);
+                    price.push(parseInt(itemlist[i].c.split('₹')[1]));
+                }
+            }
             str=""
             totalprice=0;
             for(x=0;x<book.length;x++)
